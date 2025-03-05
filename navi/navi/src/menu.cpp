@@ -6,6 +6,7 @@ Menu::Menu()
 	StartButton = { 350, 275, 150.f, 50.f };
 	SettingsButton = { 350, 375, 150, 50 };
 	ExitButton = { 350, 475, 150, 50 };
+	SettingsExitButton = { (float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2, 150, 50 };
 	Background = LoadTexture("Graphics/tester.png");
 }
 void Menu::Draw()
@@ -38,9 +39,17 @@ bool Menu::IsExitClicked()
 	else
 		return 0;
 }
+bool Menu::IsExitSettingsClicked()
+{
+	if (CheckCollisionPointRec(GetMousePosition(), SettingsExitButton) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+		return 0;
+	else 
+		return 1;
+}
 void Menu::DrawSettings()
 {
 	ClearBackground(RAYWHITE);
 	DrawTexture(Background, 0, 0, WHITE);
+	DrawRectangleRec(SettingsExitButton, RED);
 
 }

@@ -28,7 +28,12 @@ void Game::Update()
 	if (!MenuClosed)
 	{
 		MenuClosed = menu.IsStartClicked();
-		SettingsOpen = menu.IsSettingsClicked(SettingsOpen);
+
+		if (SettingsOpen)
+			SettingsOpen = menu.IsExitSettingsClicked();
+		else
+			SettingsOpen = menu.IsSettingsClicked(SettingsOpen);
+
 		ExitGame = menu.IsExitClicked();
 	}
 }
