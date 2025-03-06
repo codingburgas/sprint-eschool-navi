@@ -1,6 +1,7 @@
 #include "../src/pch.h"
 #include "../src/game.h"
 
+
 Game::Game()
 {
 	ExitGame = 0;
@@ -19,7 +20,7 @@ void Game::Draw()
 	}
 	else 
 	{
-		DrawText("GG bro", 500, 300, 40, GREEN);
+		charecter.Draw();
 	}
 
 }

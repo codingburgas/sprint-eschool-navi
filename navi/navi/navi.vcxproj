@@ -95,11 +95,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\charecter.cpp" />
     <ClCompile Include="src\game.cpp" />
     <ClCompile Include="src\menu.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\charecter.h" />
     <ClInclude Include="src\game.h" />
     <ClInclude Include="src\menu.h" />
     <ClInclude Include="src\pch.h" />
