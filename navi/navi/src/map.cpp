@@ -15,12 +15,13 @@ Map::Map()
 void Map::Draw()
 {
 	ClearBackground(RAYWHITE);
+	DrawRectangleRec(LeftHitBox, WHITE);
+	DrawRectangleRec(RightHitBox, WHITE);
+	DrawRectangleRec(TopHitBox, WHITE);
+	DrawRectangleRec(BottomHitBox, WHITE);
+	DrawRectangleRec(playerHitBox, WHITE);
 	DrawTexture(Background, position.x, position.y, WHITE);
-	DrawRectangleRec(LeftHitBox, RED);
-	DrawRectangleRec(RightHitBox, RED);
-	DrawRectangleRec(TopHitBox, RED);
-	DrawRectangleRec(BottomHitBox, RED);
-	DrawRectangleRec(playerHitBox, RED);
+
 } 
 
 void Map::Update()

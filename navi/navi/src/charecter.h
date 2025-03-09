@@ -5,10 +5,9 @@ class Charecter
 public:
 	Charecter();
 	void Draw();
-	void PlayerMoving();
-	void FrameChecker();
+	void Update();
+	void frame_update();
 	int frames;
-	int frameWidth;
 	int currentFrame;
 	int frameCounter;
 	int speed;
