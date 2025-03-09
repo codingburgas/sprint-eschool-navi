@@ -8,7 +8,7 @@ Map::Map()
 	BottomHitBox = { 0.f, GetScreenHeight() - 50.f,(float)GetScreenWidth(), 50.f };
 	TopHitBox = { 0.f, 0.f, (float)GetScreenWidth(), 50.f };
 	position = { 0, 0 };
-	playerHitBox = { (float)GetScreenWidth() / 2 - 30, (float)GetScreenHeight() / 2 - 30, (float)charecter.frameRec.width * 1.5f, charecter.frameRec.height * 1.5f };
+	playerHitBox = { (float)GetScreenWidth() / 2 - 30, (float)GetScreenHeight() / 2 - 30, (float)charecter.frameRecRight.width * 1.5f, charecter.frameRecRight.height * 1.5f };
 	colliding = { 1, 1, 1, 1 };
 }
 
