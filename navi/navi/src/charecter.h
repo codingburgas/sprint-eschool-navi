@@ -15,7 +15,7 @@ public:
 	int frameSpeed;
 	Vector2 position;
 	Rectangle frameRec;
+	vector<bool> iscolliding;
 private:
 	Texture2D charecter;
-	Texture2D Background;
 };

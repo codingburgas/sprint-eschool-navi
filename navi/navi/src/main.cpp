@@ -17,7 +17,6 @@ int main()
         ClearBackground(RAYWHITE);
         game.Draw();
         game.Update();
-        cout << game.SettingsOpen;
         if (game.ExitGame)
         {
             break;

@@ -1,8 +1,7 @@
-#include "charecter.h"
+#include "charecter.h" 
 Charecter::Charecter()
 {
 	charecter = LoadTexture("Graphics/scarfy.png");
-	Background = LoadTexture("Graphics/tester.png");
 	position = { (float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2 };
 	speed = 10;
 	frameSpeed = 8;
@@ -14,16 +13,15 @@ Charecter::Charecter()
 void Charecter::Draw()
 {
 	ClearBackground(RAYWHITE);
-	DrawTexture(Background, 0, 0, WHITE);
 	PlayerMoving();
 	DrawTextureRec(charecter, frameRec, position, WHITE);
 }
 void Charecter::PlayerMoving()
 {
-	if (IsKeyDown(KEY_RIGHT)) position.x+=speed;
-	if(IsKeyDown(KEY_LEFT))	position.x -= speed;
-	if (IsKeyDown(KEY_UP))	position.y -= speed;
-	if (IsKeyDown(KEY_DOWN)) position.y += speed;
+	if (IsKeyDown(KEY_RIGHT) && iscolliding[0]) position.x += speed;
+	if (IsKeyDown(KEY_LEFT) && iscolliding[1]) position.x -= speed;
+	if (IsKeyDown(KEY_UP) && iscolliding[2])	position.y -= speed;
+	if (IsKeyDown(KEY_DOWN) && iscolliding[3]) position.y += speed;
 }
 void Charecter::FrameChecker()
 {

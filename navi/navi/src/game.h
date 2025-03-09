@@ -2,7 +2,7 @@
 #include "../src/menu.h"
 #include "../src/pch.h"
 #include "../src/charecter.h"
-
+#include "../src/map.h"
 class Game {
 public:
 	Game();
@@ -14,4 +14,5 @@ public:
 private:
 	Menu menu;
 	Charecter charecter;
+	Map map;
 };

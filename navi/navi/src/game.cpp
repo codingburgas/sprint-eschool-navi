@@ -1,7 +1,6 @@
 #include "../src/pch.h"
 #include "../src/game.h"
 
-
 Game::Game()
 {
 	ExitGame = 0;
@@ -20,6 +19,7 @@ void Game::Draw()
 	}
 	else 
 	{
+		map.Draw();
 		charecter.Draw();
 	}
 
@@ -36,5 +36,9 @@ void Game::Update()
 			SettingsOpen = menu.IsSettingsClicked(SettingsOpen);
 
 		ExitGame = menu.IsExitClicked();
+	}
+	else {
+		map.Update();
+		charecter.iscolliding = map.colliding;
 	}
 }
