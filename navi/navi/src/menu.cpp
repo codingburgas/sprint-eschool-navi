@@ -16,6 +16,9 @@ void Menu::Draw()
 	DrawRectangleRec(StartButton, GREEN);
 	DrawRectangleRec(SettingsButton, GRAY);
 	DrawRectangleRec(ExitButton, RED);
+	DrawText("START", 380, 290, 25, WHITE);
+	DrawText("OPTION", 380, 390, 20, WHITE);
+	DrawText("EXIT", 395, 490, 20, WHITE);
 }
 
 bool Menu::IsStartClicked()
