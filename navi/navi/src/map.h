@@ -7,12 +7,13 @@ public:
 	void Draw();
 	void Update();
 	vector<bool> colliding;
+	vector<bool> toBeStoped;
 	Rectangle LeftHitBox;
 	Rectangle RightHitBox;
 	Rectangle TopHitBox;
 	Rectangle BottomHitBox;
-private:
 	Texture2D Background;
+private:
 	vector<Rectangle> ObjInLeft;
 	vector<Rectangle> ObjInRight;
 	vector<Rectangle> ObjInTop;
@@ -20,4 +21,6 @@ private:
 	Vector2 position;
 	Charecter charecter;
 	Rectangle playerHitBox;
+	Vector2 LeftTopMax;
+	Vector2 RightBottomMax;
 };

@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\navi",
+    "\\navi\\navi",
+    "\\navi\\navi\\src",
+    "\\navi\\vendor",
+    "\\navi\\vendor\\raylib",
+    "\\navi\\vendor\\raylib\\include"
   ],
-  "SelectedNode": "\\C:\\Users\\NSYanuzov23\\Source\\Repos\\sprint-eschool-navi",
+  "SelectedNode": "\\navi\\navi\\src\\map.cpp",
   "PreviewInSolutionExplorer": false
 }
