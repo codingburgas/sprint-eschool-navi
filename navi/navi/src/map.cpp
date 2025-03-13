@@ -2,7 +2,7 @@
 
 Map::Map()
 {
-	Background = LoadTexture("Graphics/tester.png");
+	Background = LoadTexture("Graphics/map.png");
 	LeftHitBox = { 0.f, 0.f, 50.f, (float)GetScreenHeight() };
 	RightHitBox = { GetScreenWidth() - 50.f, 0.f, 50.f, (float)GetScreenHeight() };
 	BottomHitBox = { 0.f, GetScreenHeight() - 50.f,(float)GetScreenWidth(), 50.f };

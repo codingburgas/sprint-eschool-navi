@@ -7,7 +7,7 @@ Menu::Menu()
 	SettingsButton = { 350, 375, 150, 50 };
 	ExitButton = { 350, 475, 150, 50 };
 	SettingsExitButton = { (float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2, 150, 50 };
-	Background = LoadTexture("Graphics/tester.png");
+	Background = LoadTexture("Graphics/map_blurred.png");
 }
 void Menu::Draw()
 {
