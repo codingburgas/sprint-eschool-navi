@@ -15,6 +15,7 @@ Map::Map()
 	RightBottomMax ={ 1440, 1340 };
 	mainDoor_Opened = LoadTexture("Graphics/doorOpened.png");
 	mainDoor_Closed = LoadTexture("Graphics/doorClosed.png");
+	DoorHitBox = { 450, (float)GetScreenHeight() / 2, (float)mainDoor_Opened.width/2, (float)mainDoor_Closed.height/2-55};
 }
 
 void Map::Draw()
@@ -25,7 +26,8 @@ void Map::Draw()
 	DrawRectangleRec(TopHitBox, WHITE);
 	DrawRectangleRec(BottomHitBox, WHITE);
 	
-	DrawRectangleRec(playerHitBox, RED);
+	DrawRectangleRec(playerHitBox, WHITE);
+	DrawRectangleRec(DoorHitBox, RED);
 	DrawTexture(Background, position.x-GetScreenWidth()/2, position.y-GetScreenHeight()/2, WHITE);
 	
 
@@ -88,5 +90,13 @@ void Map::Update()
 	{
 		playerHitBox.y += Character.speed; colliding[3] = true;
 	}
-	cout << LeftTopMax.x;
+	if (CheckCollisionRecs(DoorHitBox, playerHitBox))
+	{
+		DrawTexture(mainDoor_Opened, 450, (float)GetScreenHeight() / 2, WHITE);
+		DrawText("Press E to enter", 400, (float)GetScreenHeight()-25 , 25, RED);
+	}
+	else
+	{
+		DrawTexture(mainDoor_Closed, 450, (float)GetScreenHeight() / 2, WHITE);
+	}
 }
