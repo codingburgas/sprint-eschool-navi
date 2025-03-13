@@ -1,37 +1,37 @@
-#include "charecter.h" 
-Charecter::Charecter()
+#include "Charecter.h" 
+Character::Character()
 {
-	charecterRight = LoadTexture("Graphics/WalkRight.png");
-	charecterLeft = LoadTexture("Graphics/WalkLeft.png");
-	charecterUp = LoadTexture("Graphics/WalkUp.png");
-	charecterDown = LoadTexture("Graphics/WalkDown.png");
+	CharacterRight = LoadTexture("Graphics/WalkRight.png");
+	CharacterLeft = LoadTexture("Graphics/WalkLeft.png");
+	CharacterUp = LoadTexture("Graphics/WalkUp.png");
+	CharacterDown = LoadTexture("Graphics/WalkDown.png");
 	defaultFrame = LoadTexture("Graphics/Default.png");
 	position = { (float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2 };
-	speed = 10;
-	frameSpeed = 15;
+	speed = 7;
+	frameSpeed = 10;
 	currentFrame = 0;
 	frameCounter = 0;
 	frames = 4;
-	frameRecRight = { 0.0f, 0.0f, (float)charecterRight.width / frames, (float)charecterRight.height };
-	frameRecLeft = { 0.0f, 0.0f, (float)charecterLeft.width / frames, (float)charecterLeft.height };
-	frameRecUp = { 0.0f, 0.0f, (float)charecterUp.width / frames, (float)charecterUp.height };
-	frameRecDown = { 0.0f, 0.0f, (float)charecterDown.width / frames, (float)charecterDown.height };
+	frameRecRight = { 0.0f, 0.0f, (float)CharacterRight.width / frames, (float)CharacterRight.height };
+	frameRecLeft = { 0.0f, 0.0f, (float)CharacterLeft.width / frames, (float)CharacterLeft.height };
+	frameRecUp = { 0.0f, 0.0f, (float)CharacterUp.width / frames, (float)CharacterUp.height };
+	frameRecDown = { 0.0f, 0.0f, (float)CharacterDown.width / frames, (float)CharacterDown.height };
 }
-void Charecter::Draw()
+void Character::Draw()
 {
 	ClearBackground(RAYWHITE);
 
 	if (IsKeyDown(KEY_RIGHT))
-	DrawTextureRec(charecterRight, frameRecRight, position, WHITE);
+	DrawTextureRec(CharacterRight, frameRecRight, position, WHITE);
 	else if (IsKeyDown(KEY_LEFT))
-	DrawTextureRec(charecterLeft, frameRecLeft, position, WHITE);
+	DrawTextureRec(CharacterLeft, frameRecLeft, position, WHITE);
 	else if (IsKeyDown(KEY_UP))
-	DrawTextureRec(charecterUp, frameRecUp, position, WHITE);
+	DrawTextureRec(CharacterUp, frameRecUp, position, WHITE);
 	else if (IsKeyDown(KEY_DOWN))
-	DrawTextureRec(charecterDown, frameRecDown, position, WHITE);
+	DrawTextureRec(CharacterDown, frameRecDown, position, WHITE);
 	else DrawTexture(defaultFrame, position.x ,position.y ,WHITE);
 }
-void Charecter::Update()
+void Character::Update()
 {
 	if (IsKeyDown(KEY_RIGHT) && iscolliding[0]) position.x += speed;
 	if (IsKeyDown(KEY_LEFT) && iscolliding[1]) position.x -= speed;
@@ -46,7 +46,7 @@ void Charecter::Update()
 	if (IsKeyDown(KEY_DOWN))frame_update_down();
 	else frameRecDown.x = 0;
 }
-void Charecter::frame_update_right()
+void Character::frame_update_right()
 {
 	frameCounter++;
 	if (frameCounter > (60 / frameSpeed))
@@ -57,10 +57,10 @@ void Charecter::frame_update_right()
 		{
 			currentFrame = 0;
 		}
-		frameRecRight.x = (float)currentFrame * (float)charecterRight.width / 4+17;
+		frameRecRight.x = (float)currentFrame * (float)CharacterRight.width / 4+17;
 	}
 }
-void Charecter::frame_update_left()
+void Character::frame_update_left()
 {
 	frameCounter++;
 	if (frameCounter > (60 / frameSpeed))
@@ -71,10 +71,10 @@ void Charecter::frame_update_left()
 		{
 			currentFrame = 0;
 		}
-		frameRecLeft.x = (float)currentFrame * (float)charecterRight.width / 4+17;
+		frameRecLeft.x = (float)currentFrame * (float)CharacterRight.width / 4+17;
 	}
 }
-void Charecter::frame_update_up()
+void Character::frame_update_up()
 {
 	frameCounter++;
 	if (frameCounter > (60 / frameSpeed))
@@ -85,10 +85,10 @@ void Charecter::frame_update_up()
 		{
 			currentFrame = 0;
 		}
-		frameRecUp.x = (float)currentFrame * (float)charecterRight.width / 4+17;
+		frameRecUp.x = (float)currentFrame * (float)CharacterRight.width / 4+17;
 	}
 }
-void Charecter::frame_update_down()
+void Character::frame_update_down()
 {
 	frameCounter++;
 	if (frameCounter > (60 / frameSpeed))
@@ -99,6 +99,6 @@ void Charecter::frame_update_down()
 		{
 			currentFrame = 0;
 		}
-		frameRecDown.x = (float)currentFrame * (float)charecterRight.width / 4+17;
+		frameRecDown.x = (float)currentFrame * (float)CharacterRight.width / 4+17;
 	}
 }

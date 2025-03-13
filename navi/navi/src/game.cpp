@@ -20,7 +20,7 @@ void Game::Draw()
 	else 
 	{
 		map.Draw();
-		charecter.Draw();
+		Character.Draw();
 	}
 
 }
@@ -39,7 +39,7 @@ void Game::Update()
 	}
 	else {
 		map.Update();
-		charecter.iscolliding = map.colliding;
-		charecter.Update();
+		Character.iscolliding = map.colliding;
+		Character.Update();
 	}
 }

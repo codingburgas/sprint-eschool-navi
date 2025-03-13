@@ -3,11 +3,12 @@
     "",
     "\\navi",
     "\\navi\\navi",
+    "\\navi\\navi\\Graphics",
     "\\navi\\navi\\src",
     "\\navi\\vendor",
     "\\navi\\vendor\\raylib",
     "\\navi\\vendor\\raylib\\include"
   ],
-  "SelectedNode": "\\navi\\navi\\src\\charecter.cpp",
+  "SelectedNode": "\\navi\\navi\\src\\map.h",
   "PreviewInSolutionExplorer": false
 }
