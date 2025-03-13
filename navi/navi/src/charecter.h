@@ -1,9 +1,9 @@
 #pragma once
 #include "pch.h"
-class Charecter
+class Character
 {
 public:
-	Charecter();
+	Character();
 	void Draw();
 	void Update();
 	void frame_update_right();
@@ -22,9 +22,9 @@ public:
 	Rectangle frameRecDown;
 	vector<bool> iscolliding;
 private:
-	Texture2D charecterRight;
-	Texture2D charecterLeft;
-	Texture2D charecterUp;
-	Texture2D charecterDown;
+	Texture2D CharacterRight;
+	Texture2D CharacterLeft;
+	Texture2D CharacterUp;
+	Texture2D CharacterDown;
 	Texture2D defaultFrame;
 };

@@ -1,6 +1,6 @@
 #pragma once
 #include "pch.h"
-#include "../src/charecter.h"
+#include "../src/Charecter.h"
 class Map {
 public:
 	Map();
@@ -13,13 +13,19 @@ public:
 	Rectangle TopHitBox;
 	Rectangle BottomHitBox;
 	Texture2D Background;
+	Texture2D mainDoor_Opened;
+	Texture2D mainDoor_Closed;
+	Rectangle DoorHitBox;
+	Texture2D hallway;
+	bool playerInHall;
+	bool doorOpened;
 private:
 	vector<Rectangle> ObjInLeft;
 	vector<Rectangle> ObjInRight;
 	vector<Rectangle> ObjInTop;
 	vector<Rectangle> ObjInBottom;
 	Vector2 position;
-	Charecter charecter;
+	Character Character;
 	Rectangle playerHitBox;
 	Vector2 LeftTopMax;
 	Vector2 RightBottomMax;
