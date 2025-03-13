@@ -16,10 +16,21 @@ Map::Map()
 	mainDoor_Opened = LoadTexture("Graphics/doorOpened.png");
 	mainDoor_Closed = LoadTexture("Graphics/doorClosed.png");
 	DoorHitBox = { 450, (float)GetScreenHeight() / 2, (float)mainDoor_Opened.width/2, (float)mainDoor_Closed.height/2-55};
+	doorOpened = 0;
+	hallway = LoadTexture("Graphics/Hallway.png");
+	playerInHall = 0;
 }
 
 void Map::Draw()
 {
+	
+	if (playerInHall)
+	{
+		ClearBackground(WHITE);
+		DrawTexture(hallway, 0, 0, WHITE);
+	}
+	else
+	{
 	ClearBackground(RAYWHITE);
 	DrawRectangleRec(LeftHitBox, WHITE);
 	DrawRectangleRec(RightHitBox, WHITE);
@@ -29,6 +40,16 @@ void Map::Draw()
 	DrawRectangleRec(playerHitBox, WHITE);
 	DrawRectangleRec(DoorHitBox, RED);
 	DrawTexture(Background, position.x-GetScreenWidth()/2, position.y-GetScreenHeight()/2, WHITE);
+	if (doorOpened)
+	{
+		DrawTexture(mainDoor_Opened, 450, (float)GetScreenHeight() / 2, WHITE);
+		DrawText("Press E to enter", 400, (float)GetScreenHeight() - 25, 25, RED);
+	}
+	else
+	{
+		DrawTexture(mainDoor_Closed, 450, (float)GetScreenHeight() / 2, WHITE);
+	}
+	}
 	
 
 } 
@@ -92,11 +113,12 @@ void Map::Update()
 	}
 	if (CheckCollisionRecs(DoorHitBox, playerHitBox))
 	{
-		DrawTexture(mainDoor_Opened, 450, (float)GetScreenHeight() / 2, WHITE);
-		DrawText("Press E to enter", 400, (float)GetScreenHeight()-25 , 25, RED);
+		doorOpened = 1;
+
+		if (IsKeyPressed(KEY_E))
+		{
+			playerInHall = 1;
+		}
 	}
-	else
-	{
-		DrawTexture(mainDoor_Closed, 450, (float)GetScreenHeight() / 2, WHITE);
-	}
+	else doorOpened = 0;
 }

@@ -16,6 +16,9 @@ public:
 	Texture2D mainDoor_Opened;
 	Texture2D mainDoor_Closed;
 	Rectangle DoorHitBox;
+	Texture2D hallway;
+	bool playerInHall;
+	bool doorOpened;
 private:
 	vector<Rectangle> ObjInLeft;
 	vector<Rectangle> ObjInRight;
