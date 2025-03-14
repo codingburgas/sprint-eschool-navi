@@ -4,8 +4,9 @@
 Game::Game()
 {
 	ExitGame = 0;
-	MenuClosed = 0;
+	MenuClosed = 1;
 	SettingsOpen = 0;
+	BulgarianGameOpen = 1;
 }
 void Game::Draw()
 {
@@ -16,6 +17,10 @@ void Game::Draw()
 	else if(SettingsOpen)
 	{
 		menu.DrawSettings();
+	}
+	else if (BulgarianGameOpen)
+	{
+		BG.Draw();
 	}
 	else 
 	{
@@ -36,6 +41,11 @@ void Game::Update()
 			SettingsOpen = menu.IsSettingsClicked(SettingsOpen);
 
 		ExitGame = menu.IsExitClicked();
+	}
+	else if (BulgarianGameOpen)
+	{
+		BG.Update();
+		BulgarianGameOpen = BG.CheckIfExitPressed();
 	}
 	else {
 		map.Update();

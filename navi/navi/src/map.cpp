@@ -27,7 +27,7 @@ void Map::Draw()
 	if (playerInHall)
 	{
 		ClearBackground(WHITE);
-		DrawTexture(hallway, 0, 0, WHITE);
+		DrawTexture(hallway, position.x, position.y, WHITE);
 	}
 	else
 	{
@@ -118,6 +118,7 @@ void Map::Update()
 		if (IsKeyPressed(KEY_E))
 		{
 			playerInHall = 1;
+			position = { 0, 0 };
 		}
 	}
 	else doorOpened = 0;

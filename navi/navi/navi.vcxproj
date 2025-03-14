@@ -98,6 +98,7 @@
     <ClCompile Include="src\charecter.cpp" />
     <ClCompile Include="src\game.cpp" />
     <ClCompile Include="src\map.cpp" />
+    <ClCompile Include="src\bulgarianG.cpp" />
     <ClCompile Include="src\menu.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
@@ -105,6 +106,7 @@
     <ClInclude Include="src\map.h" />
     <ClInclude Include="src\charecter.h" />
     <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\bulgarianG.h" />
     <ClInclude Include="src\menu.h" />
     <ClInclude Include="src\pch.h" />
   </ItemGroup>
