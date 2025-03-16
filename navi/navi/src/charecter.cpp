@@ -16,27 +16,29 @@ Character::Character()
 	frameRecLeft = { 0.0f, 0.0f, (float)CharacterLeft.width / frames, (float)CharacterLeft.height };
 	frameRecUp = { 0.0f, 0.0f, (float)CharacterUp.width / frames, (float)CharacterUp.height };
 	frameRecDown = { 0.0f, 0.0f, (float)CharacterDown.width / frames, (float)CharacterDown.height };
+	destination = { (float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2 , frameRecRight.width, frameRecRight.height };
+	origin = { 0,0 };
 }
 void Character::Draw()
 {
 	ClearBackground(RAYWHITE);
 
 	if (IsKeyDown(KEY_RIGHT))
-	DrawTextureRec(CharacterRight, frameRecRight, position, WHITE);
+	DrawTexturePro(CharacterRight, frameRecRight, destination, origin, 0, WHITE);
 	else if (IsKeyDown(KEY_LEFT))
-	DrawTextureRec(CharacterLeft, frameRecLeft, position, WHITE);
+	DrawTexturePro(CharacterLeft, frameRecLeft, destination, origin, 0, WHITE);
 	else if (IsKeyDown(KEY_UP))
-	DrawTextureRec(CharacterUp, frameRecUp, position, WHITE);
+	DrawTexturePro(CharacterUp, frameRecUp, destination, origin, 0, WHITE);
 	else if (IsKeyDown(KEY_DOWN))
-	DrawTextureRec(CharacterDown, frameRecDown, position, WHITE);
-	else DrawTexture(defaultFrame, position.x ,position.y ,WHITE);
+	DrawTexturePro(CharacterDown, frameRecDown, destination, origin, 0, WHITE);
+	else DrawTexture(defaultFrame, destination.x, destination.y, WHITE);
 }
 void Character::Update()
 {
-	if (IsKeyDown(KEY_RIGHT) && iscolliding[0]) position.x += speed;
-	if (IsKeyDown(KEY_LEFT) && iscolliding[1]) position.x -= speed;
-	if (IsKeyDown(KEY_UP) && iscolliding[2])	position.y -= speed;
-	if (IsKeyDown(KEY_DOWN) && iscolliding[3]) position.y += speed;
+	if (IsKeyDown(KEY_RIGHT) && iscolliding[0]) destination.x += speed;
+	if (IsKeyDown(KEY_LEFT) && iscolliding[1]) destination.x -= speed;
+	if (IsKeyDown(KEY_UP) && iscolliding[2])	destination.y -= speed;
+	if (IsKeyDown(KEY_DOWN) && iscolliding[3]) destination.y += speed;
 	if(IsKeyDown(KEY_RIGHT))frame_update_right();
 	else frameRecRight.x=0;
 	if (IsKeyDown(KEY_LEFT))frame_update_left();
@@ -45,6 +47,14 @@ void Character::Update()
 	else frameRecUp.x = 0;
 	if (IsKeyDown(KEY_DOWN))frame_update_down();
 	else frameRecDown.x = 0;
+
+	if (update)
+	{
+		destination.width = 192;
+		destination.height = 225;
+		defaultFrame.width = 192;
+		defaultFrame.height = 225;
+	}
 }
 void Character::frame_update_right()
 {

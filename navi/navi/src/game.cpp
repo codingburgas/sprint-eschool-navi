@@ -50,6 +50,7 @@ void Game::Update()
 	else {
 		map.Update();
 		Character.iscolliding = map.colliding;
+		Character.update = map.playerInHall;
 		Character.Update();
 	}
 }

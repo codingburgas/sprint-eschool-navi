@@ -37,7 +37,7 @@ void Map::Draw()
 	DrawRectangleRec(TopHitBox, WHITE);
 	DrawRectangleRec(BottomHitBox, WHITE);
 	
-	DrawRectangleRec(playerHitBox, WHITE);
+	DrawRectangleRec(playerHitBox, RED);
 	DrawRectangleRec(DoorHitBox, RED);
 	DrawTexture(Background, position.x-GetScreenWidth()/2, position.y-GetScreenHeight()/2, WHITE);
 	if (doorOpened)

@@ -13,9 +13,9 @@ public:
 	bool BulgarianGameOpen;
 	void Draw();
 	void Update();
+	Character Character;
 private:
 	Menu menu;
-	Character Character;
 	Map map;
 	BulgarianGame BG;
 };
