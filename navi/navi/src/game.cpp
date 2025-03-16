@@ -4,9 +4,11 @@
 Game::Game()
 {
 	ExitGame = 0;
-	MenuClosed = 1;
+	MenuClosed = 0;
 	SettingsOpen = 0;
-	BulgarianGameOpen = 1;
+	BulgarianGameOpen = 0;
+	SaveLoaded = 0;
+	IsPaused = 0;
 }
 void Game::Draw()
 {
@@ -14,15 +16,24 @@ void Game::Draw()
 	{
 		menu.Draw();
 	}
-	else if(SettingsOpen)
+	else if (SettingsOpen)
 	{
 		menu.DrawSettings();
+
+	}
+	else if (!SaveLoaded)
+	{
+		save.GetName();
+	}
+	else if (IsPaused)
+	{
+		menu.DrawPauseMenu();
 	}
 	else if (BulgarianGameOpen)
 	{
 		BG.Draw();
 	}
-	else 
+	else
 	{
 		map.Draw();
 		Character.Draw();
@@ -31,10 +42,10 @@ void Game::Draw()
 }
 void Game::Update()
 {
-	if (!MenuClosed)
+	if (!MenuClosed || IsPaused)
 	{
 		MenuClosed = menu.IsStartClicked();
-
+		IsPaused = !menu.IsStartClicked();
 		if (SettingsOpen)
 			SettingsOpen = menu.IsExitSettingsClicked();
 		else
@@ -42,6 +53,13 @@ void Game::Update()
 
 		ExitGame = menu.IsExitClicked();
 	}
+	else if (!SaveLoaded)
+	{
+		if (save.fileExists(save.fileName)) save.Save();
+		else save.Load();
+		SaveLoaded = 1;
+	}
+	else if (IsKeyPressed(KEY_P))IsPaused = 1;
 	else if (BulgarianGameOpen)
 	{
 		BG.Update();

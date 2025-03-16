@@ -10,6 +10,7 @@ public:
 	bool IsExitClicked();
 	bool IsSettingsClicked(bool check);
 	void DrawSettings();
+	void DrawPauseMenu();
 private:
 	Rectangle StartButton;
 	Rectangle SettingsButton;

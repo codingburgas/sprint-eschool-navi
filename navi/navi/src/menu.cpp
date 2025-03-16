@@ -56,3 +56,11 @@ void Menu::DrawSettings()
 	DrawRectangleRec(SettingsExitButton, RED);
 
 }
+void Menu::DrawPauseMenu()
+{
+	ClearBackground(RAYWHITE);
+	DrawTexture(Background, 0, 0, WHITE);
+	DrawRectangleRec(StartButton, GREEN);
+	DrawRectangleRec(SettingsButton, GRAY);
+	DrawRectangleRec(ExitButton, RED);
+}
