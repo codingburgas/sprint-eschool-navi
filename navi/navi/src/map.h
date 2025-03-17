@@ -6,19 +6,25 @@ public:
 	Map();
 	void Draw();
 	void Update();
+	vector<Rectangle> doorsHitBox;
 	vector<bool> colliding;
 	vector<bool> toBeStoped;
+	vector<bool> doors;
 	Rectangle LeftHitBox;
 	Rectangle RightHitBox;
 	Rectangle TopHitBox;
 	Rectangle BottomHitBox;
+	Rectangle DoorHitBox;
+	Rectangle FirstDoorHitBox;
 	Texture2D Background;
 	Texture2D mainDoor_Opened;
 	Texture2D mainDoor_Closed;
-	Rectangle DoorHitBox;
 	Texture2D hallway;
+	Texture2D room;
 	bool playerInHall;
 	bool doorOpened;
+	bool playerInRoom;
+	bool hallwayDoorOpened;
 private:
 	vector<Rectangle> ObjInLeft;
 	vector<Rectangle> ObjInRight;

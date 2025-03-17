@@ -15,42 +15,56 @@ Map::Map()
 	RightBottomMax ={ 1440, 1340 };
 	mainDoor_Opened = LoadTexture("Graphics/doorOpened.png");
 	mainDoor_Closed = LoadTexture("Graphics/doorClosed.png");
-	DoorHitBox = { 450, (float)GetScreenHeight() / 2, (float)mainDoor_Opened.width/2, (float)mainDoor_Closed.height/2-55};
-	doorOpened = 0;
 	hallway = LoadTexture("Graphics/Hallway.png");
 	playerInHall = 0;
+	playerInRoom = 0;
+	room = LoadTexture("Graphics/Schoolroom.png");
+	doors = { 0,0,0,0,0 };
+	doorsHitBox = { { 450, (float)GetScreenHeight() / 2, (float)mainDoor_Opened.width / 2, (float)mainDoor_Closed.height / 2 - 55}, { 415, 10, 250, 370 } };
 }
 
 void Map::Draw()
 {
-	
-	if (playerInHall)
+	if (playerInRoom)
 	{
 		ClearBackground(WHITE);
-		DrawTexture(hallway, position.x, position.y, WHITE);
+		DrawTextureEx(room, position, 0, 6, WHITE);
 	}
 	else
 	{
-	ClearBackground(RAYWHITE);
-	DrawRectangleRec(LeftHitBox, WHITE);
-	DrawRectangleRec(RightHitBox, WHITE);
-	DrawRectangleRec(TopHitBox, WHITE);
-	DrawRectangleRec(BottomHitBox, WHITE);
-	
-	DrawRectangleRec(playerHitBox, RED);
-	DrawRectangleRec(DoorHitBox, RED);
-	DrawTexture(Background, position.x-GetScreenWidth()/2, position.y-GetScreenHeight()/2, WHITE);
-	if (doorOpened)
-	{
-		DrawTexture(mainDoor_Opened, 450, (float)GetScreenHeight() / 2, WHITE);
-		DrawText("Press E to enter", 400, (float)GetScreenHeight() - 25, 25, RED);
+		if (playerInHall)
+		{
+			ClearBackground(WHITE);
+			DrawTexture(hallway, position.x, position.y, WHITE);
+			DrawRectangleRec(FirstDoorHitBox, WHITE);
+
+		}
+		else
+		{
+			ClearBackground(RAYWHITE);
+			DrawRectangleRec(LeftHitBox, WHITE);
+			DrawRectangleRec(RightHitBox, WHITE);
+			DrawRectangleRec(TopHitBox, WHITE);
+			DrawRectangleRec(BottomHitBox, WHITE);
+
+			DrawRectangleRec(playerHitBox, RED);
+			DrawRectangleRec(DoorHitBox, RED);
+			DrawTexture(Background, position.x - GetScreenWidth() / 2, position.y - GetScreenHeight() / 2, WHITE);
+			if (doors[0])
+			{
+				DrawTexture(mainDoor_Opened, 450, (float)GetScreenHeight() / 2, WHITE);
+				DrawText("Press E to enter", 400, (float)GetScreenHeight() - 25, 25, RED);
+			}
+			else
+			{
+				DrawTexture(mainDoor_Closed, 450, (float)GetScreenHeight() / 2, WHITE);
+			}
+		}
+			if (doors[1])
+			{
+				DrawText("Press E to enter", 400, (float)GetScreenHeight() - 25, 25, RED);
+			}
 	}
-	else
-	{
-		DrawTexture(mainDoor_Closed, 450, (float)GetScreenHeight() / 2, WHITE);
-	}
-	}
-	
 
 } 
 
@@ -111,15 +125,28 @@ void Map::Update()
 	{
 		playerHitBox.y += Character.speed; colliding[3] = true;
 	}
-	if (CheckCollisionRecs(DoorHitBox, playerHitBox))
+	for (size_t i = 1; i < doorsHitBox.size(); i++)
 	{
-		doorOpened = 1;
-
-		if (IsKeyPressed(KEY_E))
+		if (CheckCollisionRecs(doorsHitBox[i], playerHitBox) && playerInHall)
 		{
-			playerInHall = 1;
-			position = { 0, 0 };
+			doors[i] = 1;
+			if (IsKeyPressed(KEY_E))
+			{
+				playerInRoom = 1;
+				position = { 0, 0 };
+			}
 		}
+		else doors[i] = 0;
 	}
-	else doorOpened = 0;
+		if (CheckCollisionRecs(doorsHitBox[0], playerHitBox))
+		{
+			doors[0] = 1;
+
+			if (IsKeyPressed(KEY_E))
+			{
+				playerInHall = 1;
+				position = { 0, 0 };
+			}
+		}
+		else doors[0] = 0;
 }
