@@ -6,7 +6,7 @@ Game::Game()
 	ExitGame = 0;
 	MenuClosed = 0;
 	SettingsOpen = 0;
-	BulgarianGameOpen = 0;
+	EnglishGameOpen = 0;
 	SaveLoaded = 0;
 	IsPaused = 0;
 }
@@ -29,9 +29,9 @@ void Game::Draw()
 	{
 		menu.DrawPauseMenu();
 	}
-	else if (BulgarianGameOpen)
+	else if (EnglishGameOpen)
 	{
-		BG.Draw();
+		EN.Draw();
 	}
 	else
 	{
@@ -60,15 +60,15 @@ void Game::Update()
 		SaveLoaded = 1;
 	}
 	else if (IsKeyPressed(KEY_P))IsPaused = 1;
-	else if (BulgarianGameOpen)
+	else if (EnglishGameOpen)
 	{
-		BG.Update();
-		BulgarianGameOpen = BG.CheckIfExitPressed();
+		EN.Update();
+		EnglishGameOpen = EN.CheckIfExitPressed();
 	}
 	else {
 		map.Update();
+		Character.Update();
 		Character.iscolliding = map.colliding;
 		Character.update = map.playerInHall;
-		Character.Update();
 	}
 }

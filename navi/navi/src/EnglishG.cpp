@@ -1,5 +1,6 @@
-#include "EnglishG.h"
-BulgarianGame::BulgarianGame()
+#include "../src/EnglishG.h"
+
+EnglishGame::EnglishGame()
 {
     questions = {
     { "What is the plural of 'child'?", "Childs", "Children", "Childes" },
@@ -41,20 +42,20 @@ BulgarianGame::BulgarianGame()
     choiceOne = "Yes";
     choiceThree = "No";
     srand(time(0));
-    font = LoadFont("resourses\arial-unicode-ms.ttf");
+    font = LoadFont("resourses/arial-unicode-ms.ttf");
     questionAnswered = 1;
-    BulgarianGameClose = 0;
+    EnglishGameClose = 0;
     rightAnswer = { 2, 2, 1, 3, 1, 1,2,1,2,1,2,1,1,1,2,1,2,2,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1};
     firstChoice = { 500, 200, 150, 50 };
     secondChoice = { 500, 300, 150, 50 };
     thirdChoice = { 500, 400, 150, 50 };
     Exit = { 500, 500, 150, 50 };
-    counter = 0;
+    counter = -1;
     correct = 0;
     points = 0;
-    target = questions.size();
+    target = 5;
 }
-void BulgarianGame::Draw()
+void EnglishGame::Draw()
 {
     ClearBackground(RAYWHITE);
     if (counter == target)
@@ -78,7 +79,7 @@ void BulgarianGame::Draw()
 
 }
 
-void BulgarianGame::Update()
+void EnglishGame::Update()
 {
         timer = GetTime();
         targetTime = GetTime() - 21;
@@ -108,7 +109,7 @@ void BulgarianGame::Update()
         MoveQuestions();
     }
 }
-void BulgarianGame::MoveQuestions()
+void EnglishGame::MoveQuestions()
 {
     vector<vector<string>>::iterator it = questions.begin();
     if (randomNum < questions.size())
@@ -132,7 +133,7 @@ void BulgarianGame::MoveQuestions()
         counter++;
     }
 }
-bool BulgarianGame::CheckIfExitPressed()
+bool EnglishGame::CheckIfExitPressed()
 {
     if (CheckCollisionPointRec(GetMousePosition(), Exit) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))return 0;
     else return 1;

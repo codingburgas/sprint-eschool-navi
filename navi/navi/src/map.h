@@ -25,6 +25,8 @@ public:
 	bool doorOpened;
 	bool playerInRoom;
 	bool hallwayDoorOpened;
+	Vector2 holder;
+	float SetStop;
 private:
 	vector<Rectangle> ObjInLeft;
 	vector<Rectangle> ObjInRight;

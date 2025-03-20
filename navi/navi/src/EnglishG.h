@@ -1,9 +1,10 @@
 #pragma once
 #include "pch.h"
-class BulgarianGame
+
+class EnglishGame
 {
 public:
-	BulgarianGame();
+	EnglishGame();
 	void Draw();
 	void Update();
 	void MoveQuestions();
@@ -13,9 +14,8 @@ public:
 	vector<string> holder;
 	vector<int> rightAnswer;
 	int counter;
-	int Answer;
 	bool questionAnswered;
-	bool BulgarianGameClose;
+	bool EnglishGameClose;
 	string question;
 	string choiceOne;
 	string choiceTwo;

@@ -10,6 +10,7 @@ public:
 	void frame_update_left();
 	void frame_update_up();
 	void frame_update_down();
+	Vector2 GetDest();
 	int frames;
 	int currentFrame;
 	int frameCounter;

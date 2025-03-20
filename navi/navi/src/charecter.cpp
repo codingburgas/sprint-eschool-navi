@@ -55,6 +55,7 @@ void Character::Update()
 		defaultFrame.width = 192;
 		defaultFrame.height = 225;
 	}
+
 }
 void Character::frame_update_right()
 {
@@ -111,4 +112,11 @@ void Character::frame_update_down()
 		}
 		frameRecDown.x = (float)currentFrame * (float)CharacterRight.width / 4+17;
 	}
+	cout << destination.y;
+
+}
+
+Vector2 Character::GetDest()
+{
+	return { destination.x, destination.y };
 }

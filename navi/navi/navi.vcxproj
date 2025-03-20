@@ -95,20 +95,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\EnglishG.cpp" />
     <ClCompile Include="src\save.cpp" />
     <ClCompile Include="src\charecter.cpp" />
     <ClCompile Include="src\game.cpp" />
     <ClCompile Include="src\map.cpp" />
-    <ClCompile Include="src\bulgarianG.cpp" />
     <ClCompile Include="src\menu.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\EnglishG.h" />
     <ClInclude Include="src\save.h" />
     <ClInclude Include="src\map.h" />
     <ClInclude Include="src\charecter.h" />
     <ClInclude Include="src\game.h" />
-    <ClInclude Include="src\bulgarianG.h" />
     <ClInclude Include="src\menu.h" />
     <ClInclude Include="src\pch.h" />
   </ItemGroup>

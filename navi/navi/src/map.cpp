@@ -21,6 +21,8 @@ Map::Map()
 	room = LoadTexture("Graphics/Schoolroom.png");
 	doors = { 0,0,0,0,0 };
 	doorsHitBox = { { 450, (float)GetScreenHeight() / 2, (float)mainDoor_Opened.width / 2, (float)mainDoor_Closed.height / 2 - 55}, { 415, 10, 250, 370 } };
+
+	SetStop = 0;
 }
 
 void Map::Draw()
@@ -37,6 +39,7 @@ void Map::Draw()
 			ClearBackground(WHITE);
 			DrawTexture(hallway, position.x, position.y, WHITE);
 			DrawRectangleRec(FirstDoorHitBox, WHITE);
+			DrawRectangleRec(playerHitBox, RED);
 
 		}
 		else
@@ -47,7 +50,7 @@ void Map::Draw()
 			DrawRectangleRec(TopHitBox, WHITE);
 			DrawRectangleRec(BottomHitBox, WHITE);
 
-			DrawRectangleRec(playerHitBox, RED);
+
 			DrawRectangleRec(DoorHitBox, RED);
 			DrawTexture(Background, position.x - GetScreenWidth() / 2, position.y - GetScreenHeight() / 2, WHITE);
 			if (doors[0])
@@ -70,6 +73,7 @@ void Map::Draw()
 
 void Map::Update()
 {
+	holder = Character.GetDest();
 	if(!colliding[1])
 	LeftTopMax.x > 0 ? colliding[1] = false : colliding[1] = true;
 	if(!colliding[2])
@@ -94,7 +98,7 @@ void Map::Update()
 	if (CheckCollisionRecs(RightHitBox, playerHitBox) && IsKeyDown(KEY_RIGHT) && colliding[0])
 	{
 		colliding[0] = false;
-		if (RightBottomMax.x > GetScreenWidth()) { RightBottomMax.x -= Character.speed; position.x -= Character.speed;}
+		if (RightBottomMax.x > GetScreenWidth()) { RightBottomMax.x -= Character.speed; position.x -= Character.speed; }
 		LeftTopMax.x -= Character.speed;
 	}
 	else if (IsKeyDown(KEY_RIGHT) && colliding[0])
@@ -106,7 +110,7 @@ void Map::Update()
 	if (CheckCollisionRecs(TopHitBox, playerHitBox) && IsKeyDown(KEY_UP) && colliding[2])
 	{
 		colliding[2] = false;
-		if (LeftTopMax.y < 0) { LeftTopMax.y += Character.speed; position.y += Character.speed; }
+		if (LeftTopMax.y < 0 && SetStop < holder.y) { LeftTopMax.y += Character.speed; position.y += Character.speed; }
 		RightBottomMax.y += Character.speed;
 	}
 	else if (IsKeyDown(KEY_UP) && colliding[2])
@@ -146,7 +150,14 @@ void Map::Update()
 			{
 				playerInHall = 1;
 				position = { 0, 0 };
+				LeftTopMax = { 400, 0 };
+				RightBottomMax = { 4500, (float)GetScreenHeight() };
+				position.x = -400;
+				SetStop = 200;
 			}
 		}
 		else doors[0] = 0;
+
+		cout << holder.y;
+
 }
