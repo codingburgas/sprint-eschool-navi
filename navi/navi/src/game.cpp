@@ -4,9 +4,9 @@
 Game::Game()
 {
 	ExitGame = 0;
-	MenuClosed = 0;
+	MenuClosed = 1;
 	SettingsOpen = 0;
-	EnglishGameOpen = 0;
+	EnglishGameOpen = 1;
 	SaveLoaded = 0;
 	IsPaused = 0;
 }
@@ -37,8 +37,8 @@ void Game::Draw()
 	{
 		map.Draw();
 		Character.Draw();
+		Character.draw_health_bar();
 	}
-
 }
 void Game::Update()
 {
@@ -64,11 +64,17 @@ void Game::Update()
 	{
 		EN.Update();
 		EnglishGameOpen = EN.CheckIfExitPressed();
+
 	}
 	else {
 		map.Update();
 		Character.Update();
 		Character.iscolliding = map.colliding;
 		Character.update = map.playerInHall;
+		if (EN.pass)
+		{
+			Character.health--;
+			EN.pass = 0;
+		}
 	}
 }
