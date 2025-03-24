@@ -20,7 +20,7 @@ Map::Map()
 	playerInRoom = 0;
 	room = LoadTexture("Graphics/Schoolroom.png");
 	doors = { 0,0,0,0,0 };
-	doorsHitBox = { { 450, (float)GetScreenHeight() / 2, (float)mainDoor_Opened.width / 2, (float)mainDoor_Closed.height / 2 - 55}, { 415, 10, 250, 370 } };
+	doorsHitBox = { { 450, (float)GetScreenHeight() / 2, (float)mainDoor_Opened.width / 2, (float)mainDoor_Closed.height / 2 - 55}, { 10, 10, 250, 370 } };
 
 	SetStop = 0;
 }
@@ -38,7 +38,7 @@ void Map::Draw()
 		{
 			ClearBackground(WHITE);
 			DrawTexture(hallway, position.x, position.y, WHITE);
-			DrawRectangleRec(FirstDoorHitBox, WHITE);
+			DrawRectangleRec(doorsHitBox[1], RED);
 			DrawRectangleRec(playerHitBox, RED);
 
 		}
