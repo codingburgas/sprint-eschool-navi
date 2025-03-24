@@ -73,7 +73,6 @@ void Map::Draw()
 
 void Map::Update()
 {
-	holder = Character.GetDest();
 	if(!colliding[1])
 	LeftTopMax.x > 0 ? colliding[1] = false : colliding[1] = true;
 	if(!colliding[2])
@@ -157,7 +156,5 @@ void Map::Update()
 			}
 		}
 		else doors[0] = 0;
-
-		cout << holder.y;
 
 }

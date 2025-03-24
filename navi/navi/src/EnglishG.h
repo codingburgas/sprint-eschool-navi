@@ -16,6 +16,7 @@ public:
 	int counter;
 	bool questionAnswered;
 	bool EnglishGameClose;
+	bool pass;
 	string question;
 	string choiceOne;
 	string choiceTwo;
