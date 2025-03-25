@@ -1,7 +1,7 @@
 <h1 align="center">NAVI</h1>
  <p align="center"><img src="navi/navi/logo.jpg"alt="NAVI logo" width=400px height=400px ></p>
  <h1>Our inspiration</h1>
- <p>We wanted to make a game that is different compared to all the others. We wanted to make it an 8bit-style experience.</p>
+ <p>We wanted to make a game that is different compared to all the others. We wanted to make it an 8bit-style(similar to UNDERTALE) experience.</p>
  <h1>Goal</h1>
  <p>Our team's goal is to satisfy our players' entertainment needs while learning at the same time.</p>
  <h1>Programs used</h1>
