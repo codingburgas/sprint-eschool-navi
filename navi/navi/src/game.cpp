@@ -4,9 +4,9 @@
 Game::Game()
 {
 	ExitGame = 0;
-	MenuClosed = 1;
+	MenuClosed = 0;
 	SettingsOpen = 0;
-	EnglishGameOpen = 1;
+	EnglishGameOpen = 0;
 	SaveLoaded = 0;
 	IsPaused = 0;
 }
