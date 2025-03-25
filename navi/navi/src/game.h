@@ -5,6 +5,7 @@
 #include "../src/map.h"
 #include "../src/EnglishG.h"
 #include "../src/save.h"
+#include "../src/MathG.h"
 class Game {
 public:
 	Game();
@@ -12,6 +13,7 @@ public:
 	bool MenuClosed;
 	bool SettingsOpen;
 	bool EnglishGameOpen;
+	bool MathGameOpen;
 	bool SaveLoaded;
 	bool IsPaused;
 	void Draw();
@@ -21,5 +23,6 @@ private:
 	Character Character;
 	Map map;
 	EnglishGame EN;
+	MathGame EN;
 	SaveSystem save;
 };

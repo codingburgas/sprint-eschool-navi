@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\bulgarianG.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:navi\\navi\\src\\bulgarianG.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:navi\\navi\\src\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:navi\\navi\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\charecter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:navi\\navi\\src\\charecter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:navi\\navi\\src\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\charecter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:navi\\navi\\src\\charecter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -17,22 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:navi\\navi\\src\\map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\charecter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:navi\\navi\\src\\charecter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:navi\\navi\\src\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:navi\\navi\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:navi\\navi\\src\\game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,23 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "map.cpp",
-              "DocumentMoniker": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\map.cpp",
-              "RelativeDocumentMoniker": "navi\\navi\\src\\map.cpp",
-              "ToolTip": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\map.cpp",
-              "RelativeToolTip": "navi\\navi\\src\\map.cpp",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "bulgarianG.cpp",
+              "DocumentMoniker": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\bulgarianG.cpp",
+              "RelativeDocumentMoniker": "navi\\navi\\src\\bulgarianG.cpp",
+              "ToolTip": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\bulgarianG.cpp",
+              "RelativeToolTip": "navi\\navi\\src\\bulgarianG.cpp",
+              "ViewState": "AgIAACsAAAAAAAAAAAAswJQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-13T11:11:39.015Z"
+              "WhenOpened": "2025-03-19T11:25:35.844Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "map.h",
               "DocumentMoniker": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\map.h",
               "RelativeDocumentMoniker": "navi\\navi\\src\\map.h",
@@ -70,68 +75,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
+              "Title": "map.cpp",
+              "DocumentMoniker": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\map.cpp",
+              "RelativeDocumentMoniker": "navi\\navi\\src\\map.cpp",
+              "ToolTip": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\map.cpp",
+              "RelativeToolTip": "navi\\navi\\src\\map.cpp",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-13T11:11:39.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "pch.h",
               "DocumentMoniker": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\pch.h",
               "RelativeDocumentMoniker": "navi\\navi\\src\\pch.h",
               "ToolTip": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\pch.h",
               "RelativeToolTip": "navi\\navi\\src\\pch.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-13T11:11:39.109Z"
+              "WhenOpened": "2025-03-13T11:11:39.109Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\main.cpp",
               "RelativeDocumentMoniker": "navi\\navi\\src\\main.cpp",
               "ToolTip": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\main.cpp",
               "RelativeToolTip": "navi\\navi\\src\\main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-13T11:11:39.14Z"
+              "WhenOpened": "2025-03-13T11:11:39.14Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "game.h",
               "DocumentMoniker": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\game.h",
               "RelativeDocumentMoniker": "navi\\navi\\src\\game.h",
               "ToolTip": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\game.h",
               "RelativeToolTip": "navi\\navi\\src\\game.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-13T11:11:39.156Z"
+              "WhenOpened": "2025-03-13T11:11:39.156Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "charecter.h",
               "DocumentMoniker": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\charecter.h",
               "RelativeDocumentMoniker": "navi\\navi\\src\\charecter.h",
               "ToolTip": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\charecter.h",
               "RelativeToolTip": "navi\\navi\\src\\charecter.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-13T11:11:39.187Z"
+              "WhenOpened": "2025-03-13T11:11:39.187Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "charecter.cpp",
               "DocumentMoniker": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\charecter.cpp",
               "RelativeDocumentMoniker": "navi\\navi\\src\\charecter.cpp",
               "ToolTip": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\charecter.cpp",
               "RelativeToolTip": "navi\\navi\\src\\charecter.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-13T11:11:39.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "game.cpp",
               "DocumentMoniker": "C:\\Users\\NSYanuzov23\\source\\repos\\sprint-eschool-navi\\navi\\navi\\src\\game.cpp",
               "RelativeDocumentMoniker": "navi\\navi\\src\\game.cpp",
@@ -140,10 +161,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-13T11:11:39.25Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
