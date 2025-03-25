@@ -20,6 +20,7 @@ Character::Character()
 	origin = { 0,0 };
 	health = 5;
 	hp = { LoadTexture("Graphics/health bar1.png"), LoadTexture("Graphics/health bar2.png"), LoadTexture("Graphics/health bar3.png"), LoadTexture("Graphics/health bar4.png"), LoadTexture("Graphics/health bar5.png")};
+	gameOver = LoadTexture("Graphics/GameOver.png");
 }
 void Character::Draw()
 {
@@ -135,6 +136,9 @@ void Character::draw_health_bar()
 		break;
 	case 5:
 		DrawTextureEx(hp[4], { 10, 20}, 0, 0.2, WHITE);
+		break;
+	case 0:
+		DrawTextureEx(gameOver, { 10, 20 }, 0, 0.2, WHITE);
 		break;
 	}
 }

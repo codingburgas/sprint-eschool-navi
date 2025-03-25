@@ -1,6 +1,7 @@
 #pragma once
 #include "pch.h"
 #include "../src/Charecter.h"
+
 class Map {
 public:
 	Map();
@@ -10,6 +11,7 @@ public:
 	vector<bool> colliding;
 	vector<bool> toBeStoped;
 	vector<bool> doors;
+	vector<Rectangle> roomObjectHitBoxes;
 	Rectangle LeftHitBox;
 	Rectangle RightHitBox;
 	Rectangle TopHitBox;

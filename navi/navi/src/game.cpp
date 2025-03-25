@@ -4,14 +4,18 @@
 Game::Game()
 {
 	ExitGame = 0;
-	MenuClosed = 1;
+	MenuClosed = 0;
 	SettingsOpen = 0;
-	EnglishGameOpen = 1;
+	EnglishGameOpen = 0;
 	SaveLoaded = 0;
 	IsPaused = 0;
 }
 void Game::Draw()
 {
+	if (map.playerInRoom)
+	{
+		EnglishGameOpen = 1;
+	}
 	if (!MenuClosed && !SettingsOpen)
 	{
 		menu.Draw();

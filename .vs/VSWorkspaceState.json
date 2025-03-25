@@ -3,10 +3,9 @@
     "",
     "\\navi",
     "\\navi\\navi",
-    "\\navi\\navi\\src",
-    "\\navi\\vendor\\raylib",
-    "\\navi\\vendor\\raylib\\include"
+    "\\navi\\navi\\Graphics",
+    "\\navi\\navi\\src"
   ],
-  "SelectedNode": "\\navi\\navi.sln",
+  "SelectedNode": "\\navi\\navi\\Graphics\\WalkLeft.png",
   "PreviewInSolutionExplorer": false
 }
