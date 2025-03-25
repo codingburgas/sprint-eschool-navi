@@ -1,4 +1,5 @@
 #include "../src/EnglishG.h"
+#include "../src/charecter.h"
 
 EnglishGame::EnglishGame()
 {
@@ -53,7 +54,8 @@ EnglishGame::EnglishGame()
     counter = -1;
     correct = 0;
     points = 0;
-    target = 5;
+    target = 20;
+    pass = 0;
 }
 void EnglishGame::Draw()
 {
@@ -76,6 +78,7 @@ void EnglishGame::Draw()
 
         DrawText(TextFormat("Time ramaining %d", timeholder - targetTime), 500, 100, 30, RED);
     }
+
 
 }
 
@@ -108,6 +111,7 @@ void EnglishGame::Update()
         correct = 0;
         MoveQuestions();
     }
+
 }
 void EnglishGame::MoveQuestions()
 {
@@ -135,6 +139,13 @@ void EnglishGame::MoveQuestions()
 }
 bool EnglishGame::CheckIfExitPressed()
 {
-    if (CheckCollisionPointRec(GetMousePosition(), Exit) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))return 0;
+    if (CheckCollisionPointRec(GetMousePosition(), Exit) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
+    {
+        if (points < 15)
+        {
+            pass = 1;
+        }
+        return 0;
+    }
     else return 1;
 }

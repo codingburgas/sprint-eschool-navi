@@ -18,6 +18,8 @@ Character::Character()
 	frameRecDown = { 0.0f, 0.0f, (float)CharacterDown.width / frames, (float)CharacterDown.height };
 	destination = { (float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2 , frameRecRight.width, frameRecRight.height };
 	origin = { 0,0 };
+	health = 5;
+	hp = { LoadTexture("Graphics/health bar1.png"), LoadTexture("Graphics/health bar2.png"), LoadTexture("Graphics/health bar3.png"), LoadTexture("Graphics/health bar4.png"), LoadTexture("Graphics/health bar5.png")};
 }
 void Character::Draw()
 {
@@ -112,11 +114,27 @@ void Character::frame_update_down()
 		}
 		frameRecDown.x = (float)currentFrame * (float)CharacterRight.width / 4+17;
 	}
-	cout << destination.y;
 
 }
 
-Vector2 Character::GetDest()
+void Character::draw_health_bar()
 {
-	return { destination.x, destination.y };
+	switch (health)
+	{
+	case 1:
+		DrawTextureEx(hp[0], { 10, 20 }, 0, 0.2, WHITE);
+		break;
+	case 2:
+		DrawTextureEx(hp[1], { 10, 20 }, 0, 0.2, WHITE);
+		break;
+	case 3:
+		DrawTextureEx(hp[2], { 10, 20}, 0, 0.2, WHITE);
+		break;
+	case 4:
+		DrawTextureEx(hp[3], { 10, 20}, 0, 0.2, WHITE);
+		break;
+	case 5:
+		DrawTextureEx(hp[4], { 10, 20}, 0, 0.2, WHITE);
+		break;
+	}
 }
