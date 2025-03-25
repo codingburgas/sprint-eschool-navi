@@ -95,6 +95,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\NPC.cpp" />
     <ClCompile Include="src\EnglishG.cpp" />
     <ClCompile Include="src\save.cpp" />
     <ClCompile Include="src\charecter.cpp" />
@@ -104,6 +105,7 @@
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\NPC.h" />
     <ClInclude Include="src\EnglishG.h" />
     <ClInclude Include="src\save.h" />
     <ClInclude Include="src\map.h" />

@@ -32,5 +32,6 @@ private:
 	Texture2D CharacterUp;
 	Texture2D CharacterDown;
 	Texture2D defaultFrame;
+	Texture2D gameOver;
 	vector<Texture2D> hp;
 };

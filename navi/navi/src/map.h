@@ -1,6 +1,7 @@
 #pragma once
 #include "pch.h"
 #include "../src/Charecter.h"
+
 class Map {
 public:
 	Map();

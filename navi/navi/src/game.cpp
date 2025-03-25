@@ -12,6 +12,10 @@ Game::Game()
 }
 void Game::Draw()
 {
+	if (map.playerInRoom)
+	{
+		EnglishGameOpen = 1;
+	}
 	if (!MenuClosed && !SettingsOpen)
 	{
 		menu.Draw();

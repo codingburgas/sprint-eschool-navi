@@ -42,7 +42,10 @@ void Map::Draw()
 		{
 			ClearBackground(WHITE);
 			DrawTexture(hallway, position.x, position.y, WHITE);
-			DrawRectangleRec(doorsHitBox[1], RED);
+			for (int i = 1; i < 4; i++)
+			{
+				DrawRectangleRec(doorsHitBox[i], RED);
+			}
 			DrawRectangleRec(playerHitBox, RED);
 
 		}
@@ -154,7 +157,7 @@ void Map::Update()
 				playerInHall = 1;
 				position = { 0, 0 };
 				LeftTopMax = { 400, 0 };
-				RightBottomMax = { 100000, (float)GetScreenHeight() };
+				RightBottomMax = { 10504, (float)GetScreenHeight() };
 				position.x = -400;
 				SetStop = 200;
 			}

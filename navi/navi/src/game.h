@@ -5,6 +5,7 @@
 #include "../src/map.h"
 #include "../src/EnglishG.h"
 #include "../src/save.h"
+#include <../src/NPC.h>
 class Game {
 public:
 	Game();
@@ -22,4 +23,5 @@ private:
 	Map map;
 	EnglishGame EN;
 	SaveSystem save;
+	NPC NPC;
 };

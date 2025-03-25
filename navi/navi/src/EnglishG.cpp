@@ -47,10 +47,10 @@ EnglishGame::EnglishGame()
     questionAnswered = 1;
     EnglishGameClose = 0;
     rightAnswer = { 2, 2, 1, 3, 1, 1,2,1,2,1,2,1,1,1,2,1,2,2,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1};
-    firstChoice = { 500, 200, 150, 50 };
-    secondChoice = { 500, 300, 150, 50 };
-    thirdChoice = { 500, 400, 150, 50 };
-    Exit = { 500, 500, 150, 50 };
+    firstChoice = { 150, 200, 150, 50 };
+    secondChoice = { 150, 300, 150, 50 };
+    thirdChoice = { 150, 400, 150, 50 };
+    Exit = { 100, 500, 200, 100 };
     counter = -1;
     correct = 0;
     points = 0;
@@ -62,8 +62,9 @@ void EnglishGame::Draw()
     ClearBackground(RAYWHITE);
     if (counter == target)
     {
-        DrawText(TextFormat("Your score is : %d", points), 500, 325, 50, BLACK);
+        DrawText(TextFormat("Your score is : %d", points), 100, 100, 55, BLACK);
         DrawRectangleRec(Exit, RED);
+        DrawText("Exit", 150, 525, 55, WHITE);
     }
     else {
         DrawRectangleRec(firstChoice, RED);
@@ -71,12 +72,12 @@ void EnglishGame::Draw()
         DrawRectangleRec(thirdChoice, RED);
 
 
-        DrawText(question.c_str(), 100, 100, 20, BLACK);
-        DrawText(choiceOne.c_str(), 320, 410, 20, RED);
-        DrawText(choiceTwo.c_str(), 320, 510, 20, RED);
-        DrawText(choiceThree.c_str(), 320, 610, 20, RED);
+        DrawText(question.c_str(), 50, 50, 30, BLACK);
+        DrawText(choiceOne.c_str(), 350, 210, 20, RED);
+        DrawText(choiceTwo.c_str(), 350, 310, 20, RED);
+        DrawText(choiceThree.c_str(), 350, 410, 20, RED);
 
-        DrawText(TextFormat("Time ramaining %d", timeholder - targetTime), 500, 100, 30, RED);
+        DrawText(TextFormat("Time ramaining %d", timeholder - targetTime), 50, 100, 30, RED);
     }
 
 
@@ -111,7 +112,10 @@ void EnglishGame::Update()
         correct = 0;
         MoveQuestions();
     }
-
+    if (CheckCollisionPointRec(GetMousePosition(), Exit))
+    {
+        EnglishGameClose = 1;
+    }
 }
 void EnglishGame::MoveQuestions()
 {
