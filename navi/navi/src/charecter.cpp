@@ -7,7 +7,7 @@ Character::Character()
 	CharacterDown = LoadTexture("Graphics/WalkDown.png");
 	defaultFrame = LoadTexture("Graphics/Default.png");
 	position = { (float)GetScreenWidth() / 2, (float)GetScreenHeight() / 2 };
-	speed = 7;
+	speed = 40;
 	frameSpeed = 10;
 	currentFrame = 0;
 	frameCounter = 0;

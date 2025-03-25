@@ -20,7 +20,7 @@ Map::Map()
 	playerInRoom = 0;
 	room = LoadTexture("Graphics/Schoolroom.png");
 	doors = { 0,0,0,0,0 };
-	doorsHitBox = { { 450, (float)GetScreenHeight() / 2, (float)mainDoor_Opened.width / 2, (float)mainDoor_Closed.height / 2 - 55}, { 10, 10, 250, 370 } };
+	doorsHitBox = { { 450, (float)GetScreenHeight() / 2, (float)mainDoor_Opened.width / 2, (float)mainDoor_Closed.height / 2 - 55}, { 10, 10, 250, 370 }, {4742,10,250,370},{5137,10,250,370},{9863,10,250,370} };
 	SetStop = 0;
 	roomObjectHitBoxes = { {30,408,465, 192}, {36,708,162, 270}, {36, 997, 162, 270}, {420, 708, 162, 270}, {420, 997 , 162, 270}, {804, 708, 162, 270},{804, 997, 162,270} };
 }
@@ -31,7 +31,10 @@ void Map::Draw()
 	{
 		ClearBackground(WHITE);
 		DrawTextureEx(room, position, 0, 6, WHITE);
-		DrawRectangleRec(roomObjectHitBoxes[0], RED);
+		for(int i=0; i < 7;i++)
+		{
+			DrawRectangleRec(roomObjectHitBoxes[i], RED);
+		}
 	}
 	else
 	{
@@ -151,7 +154,7 @@ void Map::Update()
 				playerInHall = 1;
 				position = { 0, 0 };
 				LeftTopMax = { 400, 0 };
-				RightBottomMax = { 4500, (float)GetScreenHeight() };
+				RightBottomMax = { 100000, (float)GetScreenHeight() };
 				position.x = -400;
 				SetStop = 200;
 			}
